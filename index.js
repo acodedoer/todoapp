@@ -7,6 +7,7 @@ class Todo extends React.Component{
         return (
             <div className="Todo">
                 <Header/>
+                <Item/>
             </div>  
         )
     }
@@ -21,6 +22,15 @@ function Header(props){
                 <button>+Item</button>
             </div>
         </div>
+    )
+}
+
+function Item(props){
+    return(
+	  <div className="Item">
+             <p>This is what I need to do </p>
+             <button>Delete</button>
+         </div>     
     )
 }
 
