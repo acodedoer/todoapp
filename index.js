@@ -4,7 +4,7 @@ class Todo extends React.Component{
     }
 
     render(){
-        return <h1>Todgit co App</h1>
+        return <h1>Todo App</h1>
     }
 } 
 
