@@ -1,13 +1,20 @@
 class Todo extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            items: ['Buy milk', 'Take out trash', 'Renew Netflix subscription']
+        }        
     }
 
     render(){
         return (
             <div className="Todo">
                 <Header/>
-                <Item/>
+                {
+                    this.state.items.map(function(data,index){
+                        return <Item text={data} key={index}/>
+                    })
+                }
             </div>  
         )
     }
@@ -28,7 +35,7 @@ function Header(props){
 function Item(props){
     return(
 	  <div className="Item">
-             <p>This is what I need to do </p>
+             <p>{props.text}</p>
              <button>Delete</button>
          </div>     
     )
